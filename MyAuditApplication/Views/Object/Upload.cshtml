@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Upload";
+}
+<h2>Upload CSV Files</h2>
+
+<div class="@ViewBag.ErrorClass">
+    <span>
+        @ViewBag.ErrorMessage
+    </span>
+</div>
+
+@using (Html.BeginForm("ProcessCSV", "Object", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input name="files" type="file" accept="csv" data-val="true" data-val-required="File is required" />
+    <input type="submit" style="padding: 0px 20px;margin: 20px 0px;" value="Upload" />
+}
+
+

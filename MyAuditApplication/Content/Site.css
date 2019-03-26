@@ -1,0 +1,78 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.server-error-message {
+    width: 70%;
+    margin: auto;
+    color: red;
+    border: 1px solid red;
+    text-align: center;
+}
+
+footer
+{
+    position: fixed;
+    bottom: 0;
+}
+
+/*two column form*/
+
+.question .editor-label {
+    width: 20%;
+    float: left;
+    clear: left;
+    text-align: left;
+    padding: 5px 20px;
+}
+
+ .question .editor-field,  .question .display-field {
+    width: 70%;
+    float: left;
+    text-align: left;
+    padding: 5px 20px;
+}
+
+ .question::after {
+    content: ".";
+    clear: both;
+    color: transparent;
+    display: block;
+    height: 1px;
+}
+
+ .question .editor-field input[type="text"],  .question .editor-field select {
+    width: 50%;
+}
+
+ .question .editor-field textarea {
+    width: 80%;
+}
+
+ .buttonsContainer {
+    text-align: center;
+}
+
+
+/*two column form*/
