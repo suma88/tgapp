@@ -82,7 +82,6 @@ namespace MyAuditApplication.Controllers
                 ViewBag.ErrorMessage = "Error: " + ex.Message; 
                 return View("Search", "_Layout", ViewBag.ErrorMessage);
             }
-            ViewBag.ObjectState = objectState.state.ToString();
             return objectState.state.ToString(); 
         }
     }

@@ -1,11 +1,19 @@
 ﻿
+@section scripts{
+<script type="text/javascript">
+    $('document').ready(function () {
+        $('#btnSearch').click(function () {
+            $.post("RetrieveObjectState", $("form").serialize(), function (data) {
+                $(".result").html(data);
+            });
+            return false;
+        }
+        );
+    });
+</script>
+}
 @{
     ViewBag.Title = "Search";
-    List<SelectListItem> typelist = new List<SelectListItem>();
-    typelist.Add(new SelectListItem() { Text = "Order", Value = "Order" });
-    typelist.Add(new SelectListItem() { Text = "Product", Value = "Product" });
-    typelist.Add(new SelectListItem() { Text = "Invoice", Value = "Invoice" });
-
 }
 
 <h2>Search for Object state</h2>
@@ -41,7 +49,11 @@
         </div>
     </div>
     <div style="padding:10px 18%;">
-    <input type="submit" value="Search" />
+        <input id="btnSearch" type="submit" value="Search" />
     </div>
-    
+
+    <div class="result">
+
+    </div>
+
 }
